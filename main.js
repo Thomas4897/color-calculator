@@ -1,5 +1,31 @@
 const prompt = require("prompt-sync")();
 
+const question = prompt("Please enter your Color or Colors?: ").toLowerCase();
+
+const redBlue = 'Red and Blue combine to make "Purple"';
+const redYellow = 'Red and Yellow combine to make "Orange"';
+const blueYellow = 'Blue and Yellow combine to make "Green"';
+
+const purple = 'Purple is made from "Red + Blue"';
+const orange = 'Orange is made from "Red + Yellow"';
+const green = 'Green is made from "Blue + Yellow"';
+
+if (question.includes("red") && question.includes("blue")) {
+	console.log(redBlue);
+} else if (question.includes("red") && question.includes("yellow")) {
+	console.log(redYellow);
+} else if (question.includes("blue") && question.includes("yellow")) {
+	console.log(blueYellow);
+} else if (question === "purple") {
+	console.log(purple);
+} else if (question === "orange") {
+	console.log(orange);
+} else if (question === "green") {
+	console.log(green);
+} else {
+	console.log("Error");
+}
+
 // const question = prompt(
 // 	"Would you like to Combine or Deconstruct a color?: "
 // ).toLowerCase();
@@ -53,29 +79,3 @@ const prompt = require("prompt-sync")();
 // } else {
 // 	console.log("Error");
 // }
-
-const question = prompt("Please enter your Color or Colors?: ").toLowerCase();
-
-const redBlue = 'Red and Blue combine to make "Purple"';
-const redYellow = 'Red and Yellow combine to make "Orange"';
-const blueYellow = 'Blue and Yellow combine to make "Green"';
-
-const purple = 'Purple is made from "Red + Blue"';
-const orange = 'Orange is made from "Red + Yellow"';
-const green = 'Green is made from "Blue + Yellow"';
-
-if (question.includes("red") && question.includes("blue")) {
-	console.log(redBlue);
-} else if (question.includes("red") && question.includes("yellow")) {
-	console.log(redYellow);
-} else if (question.includes("blue") && question.includes("yellow")) {
-	console.log(blueYellow);
-} else if (question === "purple") {
-	console.log(purple);
-} else if (question === "orange") {
-	console.log(orange);
-} else if (question === "green") {
-	console.log(green);
-} else {
-	console.log("Error");
-}
